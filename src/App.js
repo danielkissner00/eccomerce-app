@@ -1,11 +1,8 @@
 import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <div>
-      <h1>ecom app</h1>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;

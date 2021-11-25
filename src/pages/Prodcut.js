@@ -4,6 +4,7 @@ import Announcement from "../components/Announcment";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
+import { IoAddOutline, IoRemoveOutline } from "react-icons/io5";
 
 const Container = styled.div``;
 
@@ -73,6 +74,44 @@ const FilterSize = styled.select`
 
 const FilterSizeOption = styled.option``;
 
+const AddContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+`;
+
+const AmountContainer = styled.div`
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+`;
+
+const Amount = styled.span`
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+`;
+
+const Button = styled.button`
+  padding: 15px;
+  border: 2px solid teal;
+  background-color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  &:hover {
+    border: 2px solid white;
+    background-color: teal;
+    color: white;
+  }
+`;
+
 const Product = () => {
   return (
     <Container>
@@ -115,10 +154,11 @@ const Product = () => {
 
           <AddContainer>
             <AmountContainer>
-              <Remove />
-              <Amount></Amount>
-              <Add />
+              <IoRemoveOutline style={{ cursor: "pointer" }} />
+              <Amount>1</Amount>
+              <IoAddOutline style={{ cursor: "pointer" }} />
             </AmountContainer>
+            <Button>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
